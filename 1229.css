@@ -1,0 +1,46 @@
+
+/* 小於1200px的螢幕 */
+@media (max-width: 1200px) {
+    .Games,
+    .QUESTION,
+    .HOME {
+        font-size: 0.8rem;
+    }
+
+    
+    }
+
+/* 小於768px的螢幕 (手機) */
+@media (max-width: 768px) {
+
+    .Component26,
+    .Component25 ,
+    .Component24{
+        display: none; 
+    }
+
+    /* .container 使元素排成一列並垂直居中 */
+    .container {
+        display: flex;
+        justify-content: flex-end; /* 讓 .HOME 靠最右邊 */
+        align-items: center;
+    }
+
+    /* 給 .Component31 和 .Component32 添加右邊距 */
+    .Component31,
+    .Component32 {
+        margin-right: 10vw;  /* 為每個元素設置右邊距 */
+    }
+    
+    .Component37 {
+        
+        position: fixed;           /* 固定位置 */
+        top: 0;                    /* 距離頁面頂部 0px */
+        left: 0;                   /* 左側距離 0px */
+        width: 100vw;               /* 寬度為100% */
+        z-index: 1000;             /* 確保元素在其他元素之上 */
+        background-color: white;   /* 可選，為了讓背景清晰可見 */
+    }
+    
+}
+

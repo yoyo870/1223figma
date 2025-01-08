@@ -1,0 +1,56 @@
+/* 預設情況下，Frame 8 和 Frame 9 設置為自適應高度 */
+/* 添加過渡效果，使圖片放大時平滑 */
+.Component30, .Component27, .Component28, .Component29, .Component33, .Component34, .Component35, .Component36 {
+    transition: transform 0.3s ease; /* 設置平滑過渡 */
+  }
+  
+  /* 當鼠標懸停在圖片上時，圖片會略微放大 */
+  .Component30:hover, .Component27:hover, .Component28:hover, .Component29:hover, .Component33:hover, .Component34:hover, .Component35:hover , .Component36:hover{
+    transform: scale(1.05); /* 些微放大圖片 */
+  }
+  
+  /* 當圖片被點擊時，圖片會放大，並且恢復原樣 */
+  .Component30:active, .Component27:active, .Component28:active, .Component29:active, .Component33:active, .Component34:active, .Component35:active , .Component36:active{
+    transform: scale(1.05); /* 按下圖片時放大 */
+  }
+  .Logo2 {
+    animation: scaleAnimation 3s ease-in-out infinite; /* 設定動畫循環 */
+  }
+  
+  @keyframes scaleAnimation {
+    0% {
+      transform: scale(1); /* 初始大小 */
+    }
+    50% {
+      transform: scale(1.1); /* 中間放大 10% */
+    }
+    100% {
+      transform: scale(1); /* 最後縮回原來大小 */
+    }
+  }
+  
+  
+  
+
+/* 當螢幕寬度小於 600px 時，調整 Frame 8 和 Frame 9 的高度為百分比，以實現拉長效果 */
+@media (max-width: 600px) {
+   
+        .Games,
+        .Shop{
+            display: none;
+        }
+        .Component31,
+        .Component32 {
+    display: inline-block; /* Align them side by side */
+    margin-right: 10vw; /* Add 10vw margin to the right */
+}
+.Component37 {
+        
+    position: fixed;           /* 固定位置 */
+    top: 0;                    /* 距離頁面頂部 0px */
+    left: 0;                   /* 左側距離 0px */
+    width: 100vw;               /* 寬度為100% */
+    z-index: 1000;             /* 確保元素在其他元素之上 */
+    background-color: white;   /* 可選，為了讓背景清晰可見 */
+}
+}
